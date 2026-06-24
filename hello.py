@@ -1,19 +1,13 @@
-def read_number(prompt):
-    """Safely read a number from the user."""
-    try:
-        return float(input(prompt))
-    except ValueError:
-        print("Invalid input. Please enter a valid number.")
-        return read_number(prompt)
+import sys
 
+a = float(sys.argv[1])
+b = float(sys.argv[2])
 
-# Read two numbers with validation
-a = read_number("Enter the first number: ")
-b = read_number("Enter the second number: ")
+print("First number:", a)
+print("Second number:", b)
 
-print(f"Before swapping: a = {a}, b = {b}")
-
-# Swap using tuple unpacking
 a, b = b, a
 
-print(f"After swapping: a = {a}, b = {b}")
+print("After swapping:")
+print("First number:", a)
+print("Second number:", b)
